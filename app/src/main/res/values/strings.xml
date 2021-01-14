@@ -1,0 +1,18 @@
+<resources>
+    <string name="all_Books">allBooks</string>
+    <string name="currently_Reading_Books">currentlyReadingBooks</string>
+    <string name="already_Read_Books">alreadyReadBooks</string>
+    <string name="wishList_Books">wishListBooks</string>
+    <string name="favorite_Books">favoriteBooks</string>
+    <string name="URL_ID">url</string>
+    <string name="BOOK_ID_KEY">bookID</string>
+
+    <string name="app_name">MY LIBRARY</string>
+    <string name="activity_all_books">ALL BOOKS</string>
+    <string name="activity_book_details">BOOK DETAILS</string>
+    <string name="activity_already_read_books">ALREADY READ</string>
+    <string name="activity_currently_reading_books">CURRENTLY READING</string>
+    <string name="activity_wishList_books">WISHLIST</string>
+    <string name="activity_favorite_books">FAVORITES</string>
+
+</resources>
