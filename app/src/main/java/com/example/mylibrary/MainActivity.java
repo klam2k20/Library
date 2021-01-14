@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Main Activity for the app.
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button btnAllBooks, btnCurrentlyReading, btnAlreadyRead, btnWishList, btnFavorites, btnAbout;
@@ -21,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Utils.getInstance(this);
     }
 
+    /**
+     * Initializes all UI elements
+     */
     private void initViews() {
         btnAllBooks = findViewById(R.id.btnAllBooks);
         btnCurrentlyReading = findViewById(R.id.btnCurrentlyReading);
@@ -34,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnWishList.setOnClickListener(this);
         btnFavorites.setOnClickListener(this);
         btnAbout.setOnClickListener(this);
-
-
     }
 
     @Override

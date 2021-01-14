@@ -11,6 +11,11 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
+/**
+ * An activity to show all books within the library. Each book
+ * will be represented by a CardView that will contain the book's
+ * title, author and a short description.
+ */
 public class AllBooksActivity extends AppCompatActivity {
 
     private RecyclerView booksRecView;

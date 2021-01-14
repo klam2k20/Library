@@ -10,6 +10,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+/**
+ * An activity to show all books the user would like to read
+ * within the library. Each book will be represented by a CardView
+ * that will contain the book's title, author and a short description.
+ */
 public class WishListBookActivity extends AppCompatActivity {
 
     private RecyclerView wishListBookRecView;

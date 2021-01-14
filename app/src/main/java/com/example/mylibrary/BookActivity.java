@@ -16,6 +16,10 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+/**
+ * An activity to showcase the following details of a book:
+ * title, author, number of pages, and long description.
+ */
 public class BookActivity extends AppCompatActivity {
     private ImageView imgBookActLogo;
     private Button btnAddToCurrentlyReading, btnAddToWishList, btnAddToAlreadyRead, btnAddToFavorites;
@@ -47,6 +51,14 @@ public class BookActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Checks whether there exists a list containing the user's
+     * favorite books. If there is not such a list with be created
+     * and the selected book will be added to said list. If there
+     * is already a list the selected book will be added to said list
+     * if it hasn't already.
+     * @param incomingBook
+     */
     private void handleFavoriteBook(Book incomingBook) {
         ArrayList<Book> favoriteBooks = Utils.getInstance(this).getFavoriteBooks();
         boolean existInFavoriteBooks = false;
@@ -76,6 +88,14 @@ public class BookActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Checks whether there exists a list containing the books
+     * the user wishes to read. If there is not such a list
+     * with be created and the selected book will be added to
+     * said list. If there is already a list the selected book
+     * will be added to said list if it hasn't already.
+     * @param incomingBook
+     */
     private void handleWishListBook(Book incomingBook) {
         ArrayList<Book> wishListBooks = Utils.getInstance(this).getWishListBooks();
         boolean existInWishListBooks = false;
@@ -105,6 +125,14 @@ public class BookActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Checks whether there exists a list containing the books
+     * the user is currently reading. If there is not such a
+     * list with be created and the selected book will be added
+     * to said list. If there is already a list the selected book
+     * will be added to said list if it hasn't already.
+     * @param incomingBook
+     */
     private void handleCurrentlyReadingBook(Book incomingBook) {
         ArrayList<Book> currentlyReadingBooks = Utils.getInstance(this).getCurrentlyReadingBooks();
         boolean existInCurrentlyReadingBooks = false;
@@ -134,6 +162,14 @@ public class BookActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Checks whether there exists a list containing the books
+     * the user has already read. If there is not such a
+     * list with be created and the selected book will be added
+     * to said list. If there is already a list the selected book
+     * will be added to said list if it hasn't already.
+     * @param incomingBook
+     */
     private void handleAlreadyReadBook(Book incomingBook) {
         ArrayList<Book> alreadyReadBooks = Utils.getInstance(this).getAlreadyReadBooks();
         boolean existInAlreadyReadBooks = false;
@@ -163,6 +199,11 @@ public class BookActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Transfers book's fields to UI elements to be displayed
+     * to the user
+     * @param b
+     */
     private void setData(Book b) {
         txtBookActTitle.setText(b.getTitle());
         txtBookActAuthor.setText(b.getAuthor());
@@ -174,6 +215,14 @@ public class BookActivity extends AppCompatActivity {
                 .into(imgBookActLogo);
     }
 
+    /**
+     * Initializes all UI elements:
+     * - ImageView: containing an image of the book's cover
+     * - Buttons: buttons to add current book to a specific list
+     * - TextViews: title, author, number of pages, and description labels
+     *  as well as, textViews to contain the actually title, author,
+     *  number of pages and book summary.
+     */
     private void initViews() {
         imgBookActLogo = findViewById(R.id.imgBookActLogo);
         btnAddToCurrentlyReading = findViewById(R.id.btnAddToCurrentlyReading);

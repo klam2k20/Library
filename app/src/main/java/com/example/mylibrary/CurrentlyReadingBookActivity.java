@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+/**
+ * An activity to show all books that the user is currently reading
+ * within the library. Each book will be represented by a CardView
+ * that will contain the book's title, author and a short description.
+ */
 public class CurrentlyReadingBookActivity extends AppCompatActivity {
 
     private RecyclerView currentlyReadingBookRecView;

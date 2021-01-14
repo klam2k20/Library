@@ -23,7 +23,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-
+/**
+ * An adapter for RecyclerViews.
+ */
 public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.ViewHolder>{
     private static final String TAG = "BookRecViewAdapter";
     private ArrayList<Book> books = new ArrayList<>();
@@ -35,6 +37,10 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
         this.parentActivity = parentActivity;
     }
 
+    /**
+     * A setter for books field
+     * @param books
+     */
     public void setBooks(ArrayList<Book> books) {
         this.books = books;
 
@@ -210,6 +216,11 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
         return books.size();
     }
 
+
+    /**
+     * An inner class to hold a single item in the RecyclerView
+     */
+
     public class ViewHolder extends RecyclerView .ViewHolder {
         private CardView parent;
         private RelativeLayout expandedRelLayout;
@@ -221,7 +232,7 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             this.parent = itemView.findViewById(R.id.cardView);
             this.expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
             this.imgBook = itemView.findViewById(R.id.imgBookActLogo);
-            this.btnUpArrow = itemView.findViewById(R.id.btnUpArrow);;
+            this.btnUpArrow = itemView.findViewById(R.id.btnUpArrow);
             this.btnDownArrow = itemView.findViewById(R.id.btnDownArrow);
             this.txtTitle = itemView.findViewById(R.id.txtBookActTitle);
             this.txtAuthor = itemView.findViewById(R.id.txtBookActAuthor);

@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+/**
+ * An activity to show Meisam's website
+ */
 public class WebsiteActivity extends AppCompatActivity {
 
     private WebView webView;
