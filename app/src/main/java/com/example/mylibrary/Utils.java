@@ -65,12 +65,23 @@ public class Utils {
      */
     private void initData() {
         ArrayList<Book> books = new ArrayList<>();
-        Book b1 = new Book(1, "1Q84", "Haruki Murakami", 1350, "https://jasonlefkowitz.net/wp-content/uploads/2015/06/1q84-660x1024.jpg",
-                "A work of madden brilliance", "Long Description");
-        Book b2 = new Book(2, "The Myth of Sisyphus", "Albert Camus", 250, "https://miro.medium.com/max/500/1*DDsOx6D3oe8ZxcA-OTfIDA.jpeg",
-                "One of the most influential works of this century", "Long Description");
+        Book b1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 218, "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982146702/the-great-gatsby-9781982146702_hr.jpg",
+                "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.",
+                "Written by F. Scott Fitzgerald and published in 1925, The Great Gatsby is set during the Roaring Twenties, in 1922 and tells the story of one man's pursuit of the American Dream. The narrator, Nick Carraway, is an upper class American man who moves from the West to New York to try his luck as a bond trader. He meets an eccentric, exceptionally wealthy neighbor named Jay Gatsby, and becomes embroiled in Gatsby's plan to rekindle a lost love with a woman named Daisy Buchanan, who happens to be Nick's cousin.\n" +
+                "\n" +
+                "The protagonist, Jay Gatsby, is involved in illegal activities, including bootlegging, or selling liquor during prohibition, when liquor sales are illegal in the United States. He throws lavish parties and eventually meets and begins an affair with his beloved Daisy. Daisy's husband, Tom, is carrying on an affair with a garage owner's wife; a woman named Myrtle Wilson. Driving home from New York, Daisy strikes and kills Myrtle while driving Gatsby's car. She is unaware that she has killed her husband's mistress and leaves the scene of the crime. Myrtle's husband is despondent and tries to find his wife's killer. Daisy's husband, Tom, directs him to Gatsby's house, where he shoots and kills Gatsby, and then himself, thus resolving Daisy's affair.");
+        Book b2 = new Book("Jane Eye", " Charlotte Brontë", 480, "https://images-na.ssl-images-amazon.com/images/I/41hQyLVXYPL._SX320_BO1,204,203,200_.jpg",
+                "Jane Eyre is a novel written by Charlotte Brontë in 1847. The novel follows the story of Jane, a seemingly plain and simple girl as she battles through life's struggles. ",
+                "Jane Eyre is a novel written by Charlotte Brontë in 1847. The novel follows the story of Jane, a seemingly plain and simple girl as she battles through life's struggles. Jane has many obstacles in her life - her cruel and abusive Aunt Reed, the grim conditions at Lowood school, her love for Rochester and Rochester's marriage to Bertha. However, Jane overcomes these obstacles through her determination, sharp wit and courage. The novel ends with Jane married to Rochester with children of their own.\n" +
+                        "\n" +
+                        "There are elements of Jane Eyre that echo Charlotte Brontë's own life. She and her sisters went to a school run by a headmaster as severe as Mr Brocklehurst. Two of Charlotte's sisters died there from tuberculosis (just like Jane's only friend, Helen Burns). Charlotte Brontë was also a governess for some years before turning to writing.");
+        Book b3 = new Book("To Kill a MockingBird", "Harper Lee", 281, "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+                "When Tom Robinson, one of the town's Black residents, is falsely accused of raping Mayella Ewell, a white woman, Atticus agrees to defend him despite threats from the community. ",
+                "When Tom Robinson, one of the town's Black residents, is falsely accused of raping Mayella Ewell, a white woman, Atticus agrees to defend him despite threats from the community. At one point he faces a mob intent on lynching his client but refuses to abandon him. Scout unwittingly diffuses the situation.");
         books.add(b1);
         books.add(b2);
+        books.add(b3);
+
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
         // Converts Object to String

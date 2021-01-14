@@ -7,7 +7,7 @@ package com.example.mylibrary;
  * whether to show the long description.
  */
 public class Book {
-    private int id;
+    private int id = 0;
     private String title;
     private String author;
     private int pages;
@@ -16,7 +16,7 @@ public class Book {
     private String longDesc;
     private boolean isExpanded;
 
-    public Book(int id, String title, String author, int pages, String imgUrl, String shortDesc, String longDesc) {
+    public Book(String title, String author, int pages, String imgUrl, String shortDesc, String longDesc) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -25,6 +25,7 @@ public class Book {
         this.shortDesc = shortDesc;
         this.longDesc = longDesc;
         this.isExpanded = false;
+        id++;
     }
 
     /**
